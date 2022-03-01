@@ -24,6 +24,7 @@ COPY af467cf24a2be4144a3c166a07004c58 /var/www/html/af467cf24a2be4144a3c166a0700
 COPY dc633aa2cdf5eba7c495bee55c050953 /var/www/html/dc633aa2cdf5eba7c495bee55c050953
 COPY b44807062df88c07f51eedf2538ff043 /var/www/html/b44807062df88c07f51eedf2538ff043
 
+RUN /etc/init.d/mysql start
 ADD init_db.sh /tmp/init_db.sh
 RUN sudo bash /tmp/init_db.sh
 
@@ -31,4 +32,5 @@ RUN chown www-data:www-data -R /var/www/html && \
     rm /var/www/html/index.html
 
 COPY run.sh /
+RUN chmod +x /run.sh
 ENTRYPOINT ["/run.sh"]
