@@ -6,14 +6,11 @@ RUN apt-get update && \
     apache2 \
     php \
     nano \
+    vim \
     && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean
 
 COPY index.php /var/www/html/index.php
-COPY auth.php /var/www/html/login.php
-COPY auth.php /var/www/html/auth.php
-COPY auth.php /var/www/html/conn.php
 
 RUN chown www-data:www-data -R /var/www/html && \
     rm /var/www/html/index.html

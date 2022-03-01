@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php error_reporting(0);?>
-
-<!DOCTYPE html>
 <html>
 <title>Home</title>
 <head>
@@ -78,39 +75,26 @@ body {
     padding: 14px;
   }
   .topnav input[type=text] {
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;  
   }
 }
 </style>
 </head>
 <body>
-<?php
-if (isset($_GET['c'])){
-    $file = $_GET['c'];
-    include($file);
 
-} else {
-    echo'<div class="topnav">
-    <a class="active" href="index.php">Home</a>
-    <a href="index.php?c=about.php">About</a>
-    <a href="#contact">Contact</a>
-    <div class="search-container">
-      <form action="index.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-  </div>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="login.php">Login</a>
 
+</div>
 
-  <div style="padding-left:16px">
-    <h2>Responsive Search Bar</h2>
-    <p>Navigation bar with a search box and a submit button inside of it.</p>
-    <p>Resize the browser window to see the responsive effect.</p>
-  </div>
+<div style="padding-left:16px">
+  <h2>Responsive Search Bar</h2>
+  <p>Navigation bar with a search box and a submit button inside of it.</p>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
 
-  </body>
-  </html>';
-}
-?>
-
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+error_reporting(0);
 $a = "flagIS";
 $flag = "g00d_job_xSs";
 setcookie($a, $flag, time() + (86400 * 30), "/");
@@ -101,15 +102,19 @@ body {
   </div>
 </div>
 
-<?php
-echo $_GET['search'];
-?>
+
 
 <div style="padding-left:16px">
   <h2>Responsive Search Bar</h2>
   <p>Navigation bar with a search box and a submit button inside of it.</p>
   <p>Resize the browser window to see the responsive effect.</p>
+
+
+  <?php
+    echo $_GET['search'];
+  ?>
 </div>
+
 
 </body>
 </html>

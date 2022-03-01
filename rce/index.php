@@ -89,7 +89,7 @@ body {
     padding: 14px;
   }
   .topnav input[type=text] {
-    border: 1px solid #ccc;  
+    border: 1px solid #ccc;
   }
 }
 </style>
@@ -108,7 +108,6 @@ body {
   </div>
 </div>
 
-
 <div style="padding-left:16px">
   <h3>ping me?</h2>
   <form action="index.php">
@@ -118,16 +117,15 @@ body {
     </div>
     <button type="submit" class="btn btn-primary">PING</button>
 </form>
+
 <?php
     if (isset($_GET['domain'])){
-    
-    echo "<br><pre style=\"width: 30%\">";
-    system("ping " . $_GET['domain']);
-    echo "</pre>";
+      echo "<br><pre style=\"width: 30%\">";
+      system("ping " . $_GET['domain']);
+      echo "</pre>";
     }
     ?>
 
 </div>
-
 </body>
 </html>
