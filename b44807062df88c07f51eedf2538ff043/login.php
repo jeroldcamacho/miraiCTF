@@ -31,15 +31,14 @@
                     alert("User Name and Password fields are empty");
                     return false;
                 }
-                else
-                {
+                else {
                     if(id.length=="") {
                         alert("User Name is empty");
                         return false;
                     }
                     if (ps.length=="") {
-                    alert("Password field is empty");
-                    return false;
+                        alert("Password field is empty");
+                        return false;
                     }
                 }
             }
